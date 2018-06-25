@@ -1,5 +1,6 @@
 # LS21
 
-#Colaborators
 
-- Fredy Mendoza Vargas
+## Contributors
+Luis Moncaris
+Fredy Mendoza Vargas
