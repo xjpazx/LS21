@@ -1,7 +1,7 @@
 # LS21
 
 ## Contributors
-- Osnaider Miranda C.
--Luis Moncaris
--Fredy Mendoza Vargas
+### Luis Moncaris
+### Fredy Mendoza Vargas
+### Osnaider Miranda C.
 
