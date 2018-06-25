@@ -1,3 +1,10 @@
 # LS21
+
 #colaborators
--joseph paz
+
+## Contributors
+### Luis Moncaris
+### Fredy Mendoza Vargas
+### Osnaider Miranda C.
+### joseph paz 
+
