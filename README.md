@@ -2,3 +2,6 @@
 
 ## Contributors
 - Osnaider Miranda C.
+-Luis Moncaris
+-Fredy Mendoza Vargas
+
