@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
+from django.utils import timezone
 
 
 # Create your models here.
@@ -17,3 +18,17 @@ class Robot(models.Model):
     output_data = models.TextField()
     status = models.CharField(max_length=15, choices=STATUS_CHOICES, default='CREATED')
     owner = models.ForeignKey(User, on_delete=models.CASCADE, related_name='robots')
+
+    def __str__(self):
+        return 'Robot #{} - By: {}.'.format(self.pk, self.owner.username)
+
+    def change_status(self, status):
+        self.status = status
+        self.save()
+
+    def finish(self, output):
+        self.finished = timezone.now()
+        self.status = 'FINISHED'
+        self.output_data = output
+
+        self.save()
