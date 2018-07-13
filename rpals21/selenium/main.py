@@ -32,7 +32,6 @@ class Scrap:
 
                 li = driver.find_element_by_class_name("pagination__next")
                 next_link = li.find_element_by_tag_name('a').get_attribute('href')
-                print(next_link)
                 if "#" in next_link:
                     break
 
@@ -47,7 +46,7 @@ class Scrap:
                                              a.find_element_by_class_name('price__fraction').text,
                                              a.find_element_by_tag_name('a').get_attribute('href')))
 
-    def generar_articulos(self, string, min, max):
+    def generar_articulos(self, string, min='0', max='0'):
 
         try:
             search = driver.find_element_by_name('as_word')
@@ -62,9 +61,8 @@ class Scrap:
             button_r = driver.find_element_by_xpath('//*[@id="priceForm"]/div/button')
             button_r.click()
             time.sleep(2)
-            results=driver.find_element_by_class_name('quantity-results')
-            print(results.text)
             self.page()
+            return self.l_articulos
         finally:
             time.sleep(10)
             driver.close()
@@ -72,4 +70,4 @@ class Scrap:
 
 
 art = Scrap()
-art.generar_articulos('calculadora', '5000', '10000')
+art.generar_articulos('calculadora amarilla')
